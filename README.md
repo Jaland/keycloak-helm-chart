@@ -9,8 +9,8 @@ An example chart for deploying a Keycloak on Openshift
 ```
 git checkout release
 helm package .
-mv  keyclaok-chart*.tgz release/
-helm repo index --url https://jaland.github.io/keyclaok-helm-chart/ .
+mv  keycloak-chart*.tgz release/
+helm repo index --url https://jaland.github.io/keycloak-helm-chart/ .
 git add --all
 git commit -m "Release x.x.x"
 ```
@@ -22,12 +22,12 @@ git commit -m "Release x.x.x"
 
 ### Add helm repo
 ```
-helm repo add keyclaok https://jaland.github.io/keyclaok-helm-chart/
+helm repo add keycloak https://jaland.github.io/keycloak-helm-chart/
 helm repo list
 ```
 
 ### Deploy chart
 ```
 helm repo update
-helm install keyclaok/keyclaok-chart --name-template keyclaok
+helm install keycloak/keycloak-chart --name-template keycloak
 ```
