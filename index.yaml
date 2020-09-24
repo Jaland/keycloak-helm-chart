@@ -3,12 +3,12 @@ entries:
   keycloak:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-24T18:51:10.757843354-04:00"
+    created: "2020-09-24T18:55:25.104672025-04:00"
     description: A Helm chart for Kubernetes
     digest: bc54984911a22d0061cd670a59fdb1c9cdcaba0025e678510c9cc08e1c89d304
     name: keycloak
     type: application
     urls:
-    - https://jaland.github.io/keycloak-helm-chart/keycloak-1.0.0.tgz
+    - https://jaland.github.io/keycloak-helm-chart/release/keycloak-1.0.0.tgz
     version: 1.0.0
-generated: "2020-09-24T18:51:10.756112573-04:00"
+generated: "2020-09-24T18:55:25.103089325-04:00"
