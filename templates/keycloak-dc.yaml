@@ -1,0 +1,54 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: keycloak
+    name: keycloak
+    {{- range $label := $.Values.global.labels }}
+    {{ $label.key }} : {{ tpl $label.value $ }}
+    {{- end}}
+  name: keycloak
+spec:
+  strategy:
+    type: Rolling
+  replicas: 1
+  selector:
+    deploymentConfig: keycloak
+  template:
+    metadata:
+      labels:
+        app: frontend360
+        deploymentConfig: keycloak
+      name: keycloak-deploy
+    spec:
+      volumes:
+        - name: realm-import
+          secret:
+            secretName: keycloak-realms
+            defaultMode: 420
+      containers:
+      - name: "keycloak"
+        image: "jboss/keycloak:10.0.2"
+        volumeMounts:
+          - name: realm-import
+            mountPath: /tmp/import
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        env:
+          - name: KEYCLOAK_USER
+            value: {{ .Values.username }}
+          - name: KEYCLOAK_PASSWORD
+            value: {{ .Values.password }}
+          - name: KEYCLOAK_IMPORT
+            value: /tmp/import/realm.json
+          - name: DB_VENDOR
+            value: {{ .Values.dbVendor | default "h2" }}
+          - name: PROXY_ADDRESS_FORWARDING
+            value: 'true'
+          - name: JAVA_OPTS
+            value: >-
+              -Dkeycloak.profile.feature.upload_scripts=enabled
+              -Dorg.jboss.logmanager.nocolor=true
+  triggers:
+  - type: ConfigChange

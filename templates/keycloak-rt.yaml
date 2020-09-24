@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: frontend360
+    name: keycloak
+    {{- range $label := $.Values.global.labels }}
+    {{ $label.key }} : {{ tpl $label.value $ }}
+    {{- end}}
+  name: keycloak
+spec:
+  to:
+    name: keycloak
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge

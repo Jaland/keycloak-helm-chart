@@ -1,0 +1,7 @@
+---
+redirectUrl: https://feedback360-{{ $.Release.Namespace }}.{{ $.Values.global.cluster.baseDomain }}
+
+global:
+  cluster:
+    baseDomain: REQUIRED_VALUE
+  labels: []
