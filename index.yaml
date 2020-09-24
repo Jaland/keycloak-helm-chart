@@ -3,12 +3,12 @@ entries:
   consultant360-iac:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-24T16:43:37.157279861-04:00"
+    created: "2020-09-24T16:44:54.35726771-04:00"
     description: A Helm chart for Kubernetes
     digest: a931d4eb99552db8be7d176c5e5d11d1cc6fbc0ce2f0e8f1480047c094e991bd
     name: consultant360-iac
     type: application
     urls:
-    - https://jaland.github.io/keyclaok-helm-chart/consultant360-iac-1.0.0.tgz
+    - https://jaland.github.io/keyclaok-helm-chart/release/consultant360-iac-1.0.0.tgz
     version: 1.0.0
-generated: "2020-09-24T16:43:37.154977519-04:00"
+generated: "2020-09-24T16:44:54.354432755-04:00"
