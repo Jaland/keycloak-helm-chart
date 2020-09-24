@@ -31,3 +31,5 @@ helm repo list
 helm repo update
 helm install keycloak/keycloak-chart --name-template keycloak
 ```
+
+1.0.0
