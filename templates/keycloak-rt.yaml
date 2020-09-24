@@ -10,6 +10,7 @@ metadata:
   name: keycloak
 spec:
   to:
+    kind: Service
     name: keycloak
   tls:
     insecureEdgeTerminationPolicy: Redirect

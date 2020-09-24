@@ -1,6 +1,0 @@
-dependencies:
-- name: keycloak
-  repository: file://../keycloak_chart/
-  version: 0.1.1
-digest: sha256:0d9bc6163b38cbc135a927aedd7ce9cb405eac0524c573f0c283450d0f5846a6
-generated: "2020-08-19T10:24:33.381228692-04:00"
