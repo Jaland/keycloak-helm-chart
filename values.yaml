@@ -1,5 +1,7 @@
 ---
 redirectUrl: https://feedback360-{{ $.Release.Namespace }}.{{ $.Values.global.cluster.baseDomain }}
+username: admin
+password: admin123
 
 global:
   cluster:
