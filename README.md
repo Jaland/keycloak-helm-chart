@@ -9,7 +9,7 @@ An example chart for deploying a Keycloak on Openshift
 ```
 git checkout release
 helm package .
-mv  keycloak-chart*.tgz release/
+mv  keycloak*.tgz release/
 helm repo index --url https://jaland.github.io/keycloak-helm-chart/ .
 git add --all
 git commit -m "Release x.x.x"

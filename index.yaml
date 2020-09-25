@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  keycloak:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-09-25T13:38:53.18028498-04:00"
+    description: A Helm chart for Kubernetes
+    digest: ae3a64cdd5fb665884f0027e688e843e72bc9c56e140844616778d930dd205ad
+    name: keycloak
+    type: application
+    urls:
+    - https://jaland.github.io/keycloak-helm-chart/release/keycloak-1.1.0.tgz
+    version: 1.1.0
   keycloak-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-25T13:36:03.643101556-04:00"
+    created: "2020-09-25T13:38:53.18478442-04:00"
     description: A Helm chart for Kubernetes
     digest: 353e7250eb643b7f210e2b2e3e833704cbc42a079a15fec4179b39bf27889668
     name: keycloak-chart
@@ -11,4 +22,4 @@ entries:
     urls:
     - https://jaland.github.io/keycloak-helm-chart/release/keycloak-chart-1.1.0.tgz
     version: 1.1.0
-generated: "2020-09-25T13:36:03.635935471-04:00"
+generated: "2020-09-25T13:38:53.174717393-04:00"
