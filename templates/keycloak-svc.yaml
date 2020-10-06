@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   labels:
-    app: frontend360
+    app: {{ $.Values.global.appname }}
     name: keycloak
     {{- range $label := $.Values.global.labels }}
     {{ $label.key }} : {{ tpl $label.value $ }}
