@@ -2,7 +2,7 @@ apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
   labels:
-    app: keycloak
+    app: {{ $.Values.global.appname }}
     name: keycloak
     {{- range $label := $.Values.global.labels }}
     {{ $label.key }} : {{ tpl $label.value $ }}
@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       labels:
-        app: frontend360
+        app: {{ $.Values.global.appname }}
         deploymentConfig: keycloak
       name: keycloak-deploy
     spec:
