@@ -1,9 +1,10 @@
 ---
-redirectUrl: https://feedback360-{{ $.Release.Namespace }}.{{ $.Values.global.cluster.baseDomain }}
+redirectUrl: OAUTH_URL_REQUIRED
 username: admin
 password: admin123
 
 global:
+  appname: REQUIRED_VALUE
   cluster:
     baseDomain: REQUIRED_VALUE
   labels: []
